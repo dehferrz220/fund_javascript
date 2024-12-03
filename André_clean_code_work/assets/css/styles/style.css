@@ -1,0 +1,135 @@
+/* Resetando estilos padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos básicos */
+body {
+    font-family:'Courier New', Courier, monospace;
+    color: #59c113;
+    background-color: #2e3b2e;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #1b281b;
+    color: #ffffff;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+header h1 {
+    font-size: 1.5rem;
+}
+
+.menu-burger {
+    font-size: 1.5rem;
+    background: none;
+    color:#3e8e41;
+    border: none;
+    cursor: pointer;
+}
+
+.nav-menu {
+    display: none;
+}
+
+.nav-menu ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.nav-menu ul li {
+    display: flex;
+    align-items: center;
+}
+
+.nav-menu ul li img {
+    width: 24px;
+    margin-right: 0.5rem;
+}
+
+.nav-menu ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+.img {
+    display: block; /* Garante centralização ao usar text-align no pai */
+    margin: 29px auto; /* Centraliza a imagem horizontalmente */
+    border-radius:7px 7px 7px 7px; /* Aplica o mesmo raio para todos os cantos */
+    box-shadow: 0 4px 10px rgba(62, 142, 65, 0.5); /* Adiciona uma sombra suave */
+    /*max-width: 100%; /* Garante que a imagem não ultrapasse o tamanho do contêiner */
+}
+
+main {
+    padding: 1rem;
+    flex: 1;
+}
+
+.action-btn {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.action-btn:hover {
+    background-color: #3e8e41;
+}
+
+/* Footer */
+footer {
+    background-color: #1b281b;
+    color: #ffffff;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Animações */
+.nav-menu.open {
+    display: block;
+    position: absolute;
+    top: 4rem;
+    right: 1rem;
+    background-color: #1b281b;
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+/* Estilos para telas maiores */
+@media (min-width: 768px) {
+    .nav-menu {
+        display: flex;
+        position: static;
+        background: none;
+    }
+
+    .nav-menu ul {
+        flex-direction: row;
+        gap: 2rem;
+    }
+    
+    .menu-burger {
+        display:none;
+    }
+
+    main {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+}
+

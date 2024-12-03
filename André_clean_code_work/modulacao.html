@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modulação em JavaScript - Trabalho </title>
+    <link rel="stylesheet" href="./assets/css/styles/style.css">
+    <link rel="icon" href="./assets/icons/favicon.png" type="image/x-icon">
+    <script src="scripts/js/script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Modulação em JavaScript</h1>
+        <button class="menu-burger" onclick="toggleMenu()">&#9776;</button>
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="index.html"><img src="./assets/icons/home.png" alt="Home"> Início</a></li>
+                <li><a href="clean-code-exemplos.html"><img src="./assets/icons/clean-code.png" alt="Clean Code"> Exemplos de Clean Code</a></li>
+                <li><a href="modulacao.html"><img src="./assets/icons/module.png" alt="Modulação"> Modulação</a></li>
+                <li><a href="modulacao-exemplos.html"><img src="./assets/icons/exemplos.png" alt="Exemplos"> Exemplos de Modulação</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="img">
+        <img src="./assets/img/javascript.png" width="50%" height="50%">
+    </div>
+
+    <main>
+        <section>
+            <h2>O Que é Modulação em JavaScript?</h2>
+            <p>Modulação em JavaScript é o processo de dividir o código em arquivos ou módulos menores e reutilizáveis. Cada módulo tem uma responsabilidade específica, o que torna o código mais organizado e fácil de manter. Módulos ajudam a evitar repetição de código, facilitam testes e promovem a reutilização de componentes em projetos diferentes.</p>
+        </section>
+
+        <section>
+            <h2>Benefícios da Modulação</h2>
+            <ul>
+                <li><strong>Reutilização:</strong> Partes do código podem ser usadas em diferentes partes do projeto ou em outros projetos.</li>
+                <li><strong>Facilidade de manutenção:</strong> Cada módulo tem uma responsabilidade específica, facilitando atualizações e correções.</li>
+                <li><strong>Isolamento de escopo:</strong> Cada módulo tem seu próprio escopo, reduzindo o risco de conflitos de variáveis.</li>
+                <li><strong>Organização:</strong> O código fica mais organizado e legível, facilitando o trabalho em equipe.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>A modulação em JavaScript</h2>
+       <p>A modulação em JavaScript é uma prática que ganhou destaque especialmente com o advento do ES6, lançado em 2015, que trouxe as funcionalidades de import e export. Essa abordagem permite dividir o código em módulos, pequenas partes independentes e reutilizáveis. Cada módulo encapsula uma funcionalidade específica, isolando suas dependências e promovendo o reuso de código. Antes do ES6, frameworks como CommonJS e AMD eram populares para realizar a modulação, especialmente em aplicações complexas, mas o ES6 transformou essa prática em um padrão nativo do JavaScript. Com a modulação, o desenvolvimento se torna mais organizado e escalável, pois possibilita a colaboração em projetos maiores. Os módulos facilitam o teste de componentes individuais e contribuem para a construção de aplicações robustas e bem estruturadas, ideais para ambientes de desenvolvimento ágeis e colaborativos.</p>
+        </section>
+    
+
+        <section>
+            <h2>Exemplo Básico de Modulação</h2>
+            <p>Abaixo está um exemplo simples de modulação em JavaScript, onde criamos uma calculadora com operações de soma e subtração.</p>
+            
+            <h3>1. Criando o Módulo de Operações (calculadora.js)</h3>
+            <pre><code>
+// scripts/calculadora.js
+
+// Função para somar dois números
+export function somar(a, b) {
+    return a + b;
+}
+
+// Função para subtrair dois números
+export function subtrair(a, b) {
+    return a - b;
+}
+            </code></pre>
+
+            <h3>2. Utilizando o Módulo de Operações (app.js)</h3>
+            <p>Agora, importamos as funções do módulo <code>calculadora.js</code> e utilizamos em outro arquivo, chamado <code>app.js</code>.</p>
+            <pre><code>
+
+                <pre><code>
+                 scripts/app.js
+                    
+                    import { somar, subtrair } from './calculadora.js';
+                    
+                    console.log(somar(5, 3)); // Saída: 8
+                    console.log(subtrair(10, 4)); // Saída: 6
+                                </code></pre>
+                            </section>
+                    
+                            <section>
+                                <h2>Tipos de Exportação</h2>
+                                <p>Existem dois tipos principais de exportação em JavaScript: <strong>Exportação Nomeada</strong> e <strong>Exportação Padrão</strong>.</p>
+                    
+                                <h3>Exportação Nomeada</h3>
+                                <p>Exportamos múltiplas funções ou variáveis de um módulo usando exportação nomeada. Cada função ou variável é exportada individualmente.</p>
+                                <pre><code>
+                    // Exportação Nomeada
+                    export function somar(a, b) { return a + b; }
+                    export function subtrair(a, b) { return a - b; }
+                    
+                    // Importação Nomeada
+                    import { somar, subtrair } from './calculadora.js';
+                                </code></pre>
+                    
+                                <h3>Exportação Padrão</h3>
+                                <p>A exportação padrão permite exportar um único valor de um módulo. Esse valor pode ser uma função, uma classe ou qualquer outra expressão JavaScript.</p>
+                                <pre><code>
+                    // Exportação Padrão
+                    export default function dividir(a, b) {
+                        return a / b;
+                    }
+                    
+                    // Importação Padrão
+                    import dividir from './calculadora.js';
+                                </code></pre>
+                            </section>
+                    
+                            <section>
+                                <h2>Usando Módulos em um Projeto</h2>
+                                <p>Ao criar um projeto com JavaScript modular, organize os módulos de forma que cada arquivo tenha uma função específica e coesa. Abaixo está uma estrutura de exemplo para um projeto com módulos.</p>
+                                
+                                <h3>Estrutura de Arquivos</h3>
+                                <pre><code>
+                    my-project/
+                    ├── index.html
+                    ├── scripts/
+                    │   ├── app.js
+                    │   ├── calculadora.js
+                    │   └── utils.js
+                    └── styles/
+                        └── style.css
+                                </code></pre>
+                            </section>
+                    
+                            <section>
+                                <h2>Importando Módulos em HTML</h2>
+                                <p>Para utilizar módulos JavaScript em HTML, utilize o atributo <code>type="module"</code> na tag <code>&lt;script&gt;</code>, como no exemplo abaixo:</p>
+                                <pre><code>
+                            <section>
+                                <h2>Boas Práticas para Modulação</h2>
+                                <ul>
+                                    <li><strong>Mantenha o escopo local:</strong> Evite variáveis globais, mantenha as variáveis e funções no escopo do módulo.</li>
+                                    <li><strong>Evite misturar responsabilidades:</strong> Cada módulo deve ter uma responsabilidade única para garantir uma arquitetura limpa.</li>
+                                    <li><strong>Nomeie bem os módulos:</strong> Nomes devem ser claros, refletindo o conteúdo ou a função do módulo.</li>
+                                    <li><strong>Documente funções e variáveis:</strong> Comente seu código para tornar o módulo mais compreensível.</li>
+                                </ul>
+                            </section>
+                        </main>
+                    
+                        <footer>
+                            <p>&copy; 2024 - Guia de Clean Code e Modulação</p>
+                        </footer>
+                    

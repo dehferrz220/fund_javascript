@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplos de Modulação em JavaScript - Trabalho </title>
+    <link rel="stylesheet" href="./assets/css/styles/style.css">
+    <link rel="icon" href="../assets/icons/favicon.png" type="image/x-icon">
+    <script src="scripts/js/script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Exemplos de Modulação em JavaScript</h1>
+        <button class="menu-burger" onclick="toggleMenu()">&#9776;</button>
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="index.html"><img src="../assets/icons/home.png" alt="Home"> Início</a></li>
+                <li><a href="clean-code-exemplos.html"><img src="./assets/icons/clean-code.png" alt="Clean Code"> Exemplos de Clean Code</a></li>
+                <li><a href="modulacao.html"><img src="./assets/icons/module.png" alt="Modulação"> Modulação</a></li>
+                <li><a href="modulacao-exemplos.html"><img src="./assets/icons/exemplos.png" alt="Exemplos"> Exemplos de Modulação</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Modulação com JavaScript</h2>
+            <p>Em JavaScript, a modulação permite que nosso código seja dividido em partes menores e reutilizáveis, melhorando a manutenção e a organização do código.</p>
+
+            <h3>Exemplo de Exportação e Importação com ES Modules</h3>
+            <p>Aqui, dividimos funções em diferentes módulos e as importamos em um arquivo principal:</p>
+            <pre>
+<code>
+// Arquivo math.js
+export function somar(a, b) {
+    return a + b;
+}
+export function subtrair(a, b) {
+    return a - b;
+}
+
+// Arquivo main.js
+import { somar, subtrair } from './math.js';
+console.log(somar(10, 5));  // Saída: 15
+console.log(subtrair(10, 5));  // Saída: 5
+</code>
+            </pre>
+
+            <h3>Organizando Código com Múltiplos Módulos</h3>
+            <p>Dividir funcionalidades em módulos especializados ajuda a manter cada parte focada em uma única responsabilidade.</p>
+            <pre>
+<code>
+// Arquivo calculadora.js
+export function multiplicar(a, b) {
+    return a * b;
+}
+export function dividir(a, b) {
+    return a / b;
+}
+
+// Arquivo app.js
+import { somar, subtrair } from './math.js';
+import { multiplicar, dividir } from './calculadora.js';
+
+console.log(multiplicar(6, 7)); // Saída: 42
+console.log(dividir(42, 7));    // Saída: 6
+</code>
+            </pre>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy;Emílio - 2024 - Trabalho sobre Clean Code e Modulação</p>
+    </footer>
+</body>
+</html>
