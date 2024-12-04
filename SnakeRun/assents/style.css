@@ -1,0 +1,117 @@
+@charset "UTF-08"; /* Define o charset como UTF-8 para suportar caracteres especiais. */
+
+/* Reset de estilos básicos para todos os elementos */
+* {
+    margin: 0; /* Remove margens padrão */
+    padding: 0; /* Remove preenchimentos padrão */
+    box-sizing: border-box; /* Inclui bordas e preenchimentos no cálculo da largura e altura */
+    font-family: 'Courier New', Courier, monospace; /* Define a fonte padrão como Courier New */
+}
+
+/* Estilização do corpo e do main */
+body,
+main {
+    background-image: url(../assents/fundo.png);
+    background-position: center; /*posiciona centralizando a img*/
+    font-family: 'Courier New', Courier, monospace; /* Define a fonte para o corpo e o main */
+    background-color: hsla(101, 77%, 24%, 0.829); /* Define um fundo verde escuro com opacidade */
+    display: flex;
+    flex-direction: column; /* Organiza os elementos em coluna */
+    min-width: 100vh; /* Define a largura mínima igual à altura da tela */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    justify-content: center; /* Centraliza os itens verticalmente */
+}
+#audio {
+    display: block;
+}
+
+img{
+    margin: 25px;
+    border-radius: 6px 6px 6px 6px;
+}
+/* Estilo para o título principal */
+h1 {
+    font-size: 2.5em; /* Define o tamanho da fonte */
+    color: #f5efea; /* Cor clara para o texto */
+}
+
+/* Estilização do canvas (área do jogo) */
+canvas {
+    background-image: url('../assents/cobrinha.png');/*fundo com imagem*/
+    background-color: #0000008a; /* Fundo preto com opacidade */
+    align-items: center; /* Centraliza o conteúdo */
+    border: 5px solid #05af4c; /* Borda verde brilhante */
+}
+
+/* Estilização da seção de score */
+.score {
+    display: flex;
+    flex-direction: column; /* Exibe os elementos em coluna */
+    align-items: center; /* Centraliza os elementos horizontalmente */
+    font-size: 1.8rem; /* Tamanho da fonte */
+    color: #e4eeea; /* Cor clara para o texto */
+}
+
+/* Valor do score */
+.score--value {
+    font-weight: 700; /* Texto em negrito */
+    font-size: 4.5rem; /* Tamanho grande da fonte */
+    display: block;
+    margin-top: -10px; /* Ajusta o posicionamento para cima */
+}
+
+/* Tela de menu que aparece quando o jogo termina */
+.menu-screen {
+    position: absolute; /* Posicionamento sobreposto */
+    display: none; /* Oculto inicialmente */
+    flex-direction: column; /* Elementos dispostos em coluna */
+    align-items: center; /* Centraliza os elementos horizontalmente */
+    z-index: 1; /* Sobrepõe os outros elementos */
+}
+
+/* Estilo do texto "Game Over" */
+.game-over {
+    text-transform: uppercase; /* Transforma o texto em letras maiúsculas */
+    font-weight: 700; /* Texto em negrito */
+    font-size: 3rem; /* Tamanho grande da fonte */
+    color: #bb270db7; /* Cor vermelha com opacidade */
+}
+
+/* Estilo para exibir a pontuação final */
+.final-score {
+    font-size: 1.5rem; /* Define o tamanho da fonte */
+    font-weight: 500; /* Peso intermediário da fonte */
+    color: #942c12; /* Cor vermelha escura */
+}
+
+/* Estilo para o botão de "Play" */
+.btn-play {
+    border: none; /* Remove a borda padrão */
+    border-radius: 100px; /* Borda arredondada */
+    padding: 10px 15px 10px 12px; /* Espaçamento interno */
+    font-size: 1rem; /* Tamanho da fonte */
+    font-weight: 600; /* Texto semi-negrito */
+    color: #333; /* Cor escura para o texto */
+    margin-top: 40px; /* Margem superior */
+    display: flex;
+    align-items: center; /* Centraliza o texto e ícones verticalmente */
+    justify-content: center; /* Centraliza o texto horizontalmente */
+    gap: 5px; /* Espaço entre elementos internos */
+    cursor: pointer; /* Cursor em formato de mão */
+}
+
+/* Estilização do rodapé */
+footer {
+    font-family: 'Courier New', Courier, monospace; /* Fonte padrão do projeto */
+    margin:15px;
+    border-radius: 6px 6px 6px 6px;
+    background-color: #030f02a1; /* Fundo verde escuro com opacidade */
+    color: #36c762da; /* Texto verde claro com opacidade */
+    min-width: 100vh; /* Largura mínima igual à altura da tela */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    display: flex;
+    flex-direction: column; /* Elementos dispostos em coluna */
+    justify-content: center; /* Centraliza os itens verticalmente */
+}
+
+/* Comentário adicional para separar seções de código */

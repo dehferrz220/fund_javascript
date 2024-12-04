@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<!-- Define o tipo de documento como HTML5. -->
+<html lang="pt-br">
+<!-- Define o idioma da página como português do Brasil. -->
+
+<head>
+  <meta charset="UTF-8">
+  <!-- Define a codificação de caracteres como UTF-8, permitindo caracteres especiais. -->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Ajusta a escala da página para dispositivos móveis, melhorando a responsividade. -->
+
+  <title>Snake Game</title>
+  <!-- Define o título da aba do navegador. -->
+
+  <link rel="shortcut icon" href="./assents/gamepad.svg" type="image/x-icon">
+  <!-- Inclui o ícone da página (favicon). -->
+
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <!-- Importa um conjunto de ícones (Material Symbols Outlined) do Google Fonts. -->
+
+  <link rel="stylesheet" href="./assents/style.css">
+  <!-- Link para o arquivo de estilo CSS da página. -->
+</head>
+
+<body>
+
+  <audio id="background-music" loop autoplay>
+    <source src="./assents/solarium (versao game).mp3" type="audio/mpeg">
+  </audio>
+
+  <main>
+<img src="./assents/cobrinha.png" width="25%" height="15%">
+    <!-- Elemento principal da página.-->
+    <!-- <h1>Snake Run</h1> -->
+    <!-- Título do jogo. -->
+
+    <div class="score">Score: <span class="score--value">00</span></div>
+    <!-- Exibe a pontuação do jogador, inicialmente definida como 00. -->
+
+    <div class="menu-screen">
+      <!-- Tela de menu exibida quando o jogo termina. -->
+      <span class="game-over">Bye!Bye!</span>
+      <!-- Mensagem de fim de jogo. -->
+
+      <span class="final-score">score <span>00</span></span>
+      <!-- Exibe a pontuação final do jogador. -->
+
+      <button class="btn-play">
+        <!-- Botão para reiniciar o jogo. -->
+        <span class="material-symbols-outlined">
+          play_circle
+        </span>
+     Play Again?
+      </button>
+      <!-- Botão de reinício com um ícone de "play". -->
+    </div>
+
+    <canvas width="600" height="600"></canvas>
+    <!-- Canvas onde o jogo Snake será desenhado, com dimensões de 600x600 pixels. -->
+  </main>
+
+  <footer>2024 - Desenvolvido por _@dehferrz_ </footer>
+  <!-- Rodapé da página com o nome do desenvolvedor e o ano. -->
+
+ 
+  <!-- Um segundo canvas, possivelmente adicionado por engano, já que não há um ID ou uso explícito. -->
+
+</body>
+
+<!-- <canvas id="stage" width="600" height="600"></canvas> -->
+   <!-- <canvas width="600" height="400"></canvas>
+<!- Um canvas comentado, talvez usado para testes anteriores. -->
+
+<script src="./assents/script.js"></script>
+<!-- Inclui o arquivo JavaScript para o funcionamento do jogo. -->
+ <!-- Fork com o professor Ivan -->
+
+</html>
